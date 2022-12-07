@@ -1,6 +1,6 @@
 <template>
     <p>
-       Hello everyone
+       nuxt
     </p>
     <p>
         Hello GitHub
