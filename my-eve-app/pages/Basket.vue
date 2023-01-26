@@ -55,7 +55,7 @@
                         </v-col>
                         <v-col md="2">
                             <v-col></v-col>
-                            <v-btn rounded class="mr-2" color="white" medium>
+                            <v-btn  rounded class="mr-2" color="white" medium>
                                 <v-icon style="color:grey">
                                     {{icons.mdiPlus}}
                                 </v-icon>
@@ -129,8 +129,8 @@
                                 </v-col>
                                 </v-row>
                                 <v-row md="4">
-                            <v-btn rounded class="mr-2" color="#ff007f" x-large >
-                                  <p style="color:white; font-size: small; tex" class="my-2">Devam Et  </p> 
+                            <v-btn to="/Basket" rounded class="mr-2" color="#ff007f" x-large >
+                                  <p style="color:white; font-size: small; text" class="my-2">Devam Et  </p> 
                                   <v-icon style="color:white">
                                         {{icons.mdiArrowLeft}}
                                     </v-icon>  
@@ -146,7 +146,9 @@
     </v-card>
   </v-sheet>
 </template>
+
 <script>
+
   import { mdiClose,mdiArrowLeft,mdiPlus,mdiMinus} from '@mdi/js'
   export default {
     data() {

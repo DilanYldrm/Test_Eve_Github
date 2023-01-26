@@ -1,8 +1,5 @@
 <template>
     <p>
-       nuxt
-    </p>
-    <p>
-        Hello GitHub
+        Nuxt
     </p>
 </template>

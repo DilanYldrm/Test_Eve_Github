@@ -2,6 +2,7 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  mode:'spa',
   head: {
     titleTemplate: '%s - my-eve-app',
     title: 'my-eve-app',
@@ -34,10 +35,37 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+
   ],
+  
+ 
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    [
+      '@nuxtjs/firebase', 
+      {
+         config:{
+          apiKey: "AIzaSyBrCWyzOeLa5Kumt5sMx2K2c64uPLkG4E4",
+          authDomain: "eveshop-c41e4.firebaseapp.com",
+          projectId: "eveshop-c41e4",
+          storageBucket: "eveshop-c41e4.appspot.com",
+          messagingSenderId: "149985672364",
+          appId: "1:149985672364:web:3463d1baccb2204ec87309",
+          measurementId: "G-KMRELL4Q0C"
+         },
+         services:{
+          auth:{
+            
+            onAuthStateChangedMutation:'ON_AUTH_STATE_CHANGED_MUTATION',
+            onAuthStateChangedAction:'onAuthStateChangedAction'
+          },
+          
+          
+        }
+         }
+        ]
+    
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

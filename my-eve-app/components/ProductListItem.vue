@@ -1,5 +1,5 @@
 <template>
-    <v-card :loading="loading" class="mx-auto" height="100%" max-width="374">
+    <v-card :loading="loading" class="mx-auto" height="100%" max-width="374" @click="$router.push({ path: `/ProductDetails/${product.id}`})">
       <template slot="progress">
        <v-progress-linear color="deep-purple" height="10" indeterminate></v-progress-linear>
       </template>
@@ -22,6 +22,7 @@
     </v-card-text>
     </v-card>
 </template>
+
 <script>
 
 export default {
@@ -39,9 +40,21 @@ export default {
     }
   },
     data: () => ( {
-        loading : false,
+        loading : true,
         Selection: 1,
 
     }),
+
+      computed: {
+     productPath() {
+      return `/ProductDetails/${this.products.id} `
+    }
+   },
+   methods: {
+     reserve() {
+       this.loading = true
+
+     },
+   },
 }
 </script>
