@@ -63,7 +63,6 @@ export default {
   },
   methods: {
     login() {
-      debugger
       let that = this
       this.$fire.auth.signInWithEmailAndPassword(this.auth.email, this.auth.password).then((userCredential) => {
         const user = userCredential.user
