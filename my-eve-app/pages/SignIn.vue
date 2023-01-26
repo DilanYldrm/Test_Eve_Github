@@ -74,6 +74,20 @@ export default {
         that.snackbar = true
       })
     },
+    
+    async signup() {
+      console.log("strted")
+      try {
+        await this.$fire.auth.createUserWithEmailAndPassword(
+          this.email,
+          this.password
+        )
+        this.$router.push('/aftersignup')
+      } catch (e) {
+        handleError(e)
+      }
+    },
+
     forgotPassword() {
       let that = this
       this.$fire.auth.sendPasswordResetEmail(this.auth.email)
